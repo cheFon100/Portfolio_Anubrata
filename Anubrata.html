@@ -17,7 +17,7 @@
         }
 
         body {
-            background-color: midnightblue;
+            background-color: rgb(13, 52, 50);
             color: skyblue;
         }
 
@@ -76,9 +76,11 @@
             font-size: 3rem;
             margin: 70px 0;
         }
+
         .leftSection .buttons {
             padding: 50px 0;
         }
+
         .leftSection .btn {
             padding: 12px;
             background: bisque;
@@ -88,6 +90,7 @@
             font-size: 20px;
             cursor: pointer;
         }
+
         .rightSection img {
             width: 80%;
             margin: 50px 0;
@@ -105,7 +108,7 @@
         .secondSection {
             max-width: 80vw;
             margin: auto;
-            height: 80vh;
+            height: 150vh;
         }
 
         .secondSection h1 {
@@ -148,24 +151,99 @@
 
         footer {
             background-color: rgb(0, 107, 128);
-            
+
         }
 
         .footer {
             display: flex;
-            padding: 23px 122px;
+            padding: 10px 122px;
             justify-content: space-evenly;
         }
+
         .footer ul {
             list-style: none;
         }
-        .footer > div {
-           width: 223px; 
+
+        .footer>div {
+            width: 223px;
         }
+
         footer .footer-rights {
             text-align: center;
             color: gray;
             padding: 12px 0;
+        }
+
+        footer .footer-third {
+            border: 20px 0;
+        }
+
+        @media screen and (max-width: 1400px) {
+
+            .secondSection .vertical {
+                height: unset;
+            }
+
+            .box {
+                flex-direction: column;
+            }
+
+            .vertical-title,
+            .vertical-desc {
+                left: 45px;
+            }
+
+            .secondSection .box {
+                width: 50vw;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            footer {
+                display: flex;
+            }
+
+            .firstSection {
+                flex-direction: column-reverse;
+            }
+
+            .leftSection {
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .rightSection {
+                width: 721px !important;
+                display: flex;
+                justify-content: center;
+            }
+
+            .rightSection img {
+                width: 45%vw;
+                margin-bottom: 73px;
+            }
+
+            .secondSection {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+
+            .image-top {
+                top: 133;
+
+            }
+
+            body {
+                min-width: fit-content;
+            }
+
         }
     </style>
 </head>
@@ -173,15 +251,15 @@
 <body>
     <header>
         <nav>
-            <div class="lef">Anubrata Das</div>
+            <div class="lef" id="home">Anubrata Das</div>
             <div class="right">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Education</a></li>
-                    <li><a href="/">Experiences</a></li>
-                    <li><a href="/">Skills</a></li>
-                    <li><a href="/">Connect</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#abt">About</a></li>
+                    <li><a href="#edu">Education</a></li>
+                    <li><a href="#exp">Experiences</a></li>
+                    <li><a href="#skl">Skills</a></li>
+                    <li><a href="#con">Connect</a></li>
                 </ul>
             </div>
         </nav>
@@ -195,7 +273,7 @@
                 <span id="element"></span>
                 <div class="buttons">
                     <button class="btn"><a href="https://github.com/cheFon100">My GitHub</a></button>
-                    
+
                 </div>
             </div>
             <div class="rightSection">
@@ -204,7 +282,56 @@
         </section>
         <hr>
         <section class="secondSection">
-            <h1>Experiences</h1>
+            <h1 id="abt" class="abt">About</h1>
+            HI! I am Anubrata Das. A freshman at VIT Vellore with a passion for AI/ML and web development. Music fuels
+            my creativity when
+            I'm not coding. As a dedicated learner, I enjoy solving problems by first understanding their core causes. I
+            approach challenges with curiosity and persistence, whether working on tech projects or exploring new
+            musical styles. My goal is to keep growing my skills while creating meaningful solutions that make a
+            difference.
+            <hr>
+            <section id="edu">
+                <h1>Education</h1>
+
+                <div class="education-item">
+                    <h3>VIT Vellore</h3>
+                    <p>B.Tech in Electronics and Instrumentation Engineering</p>
+                    <p>School of Electronics Engineering (SELECT)</p>
+                    <p>2024 - Present</p>
+                </div>
+
+                <div class="education-item">
+                    <h3>Techno India Group Public School, Siliguri</h3>
+                    <p>2022 - 2024</p>
+                    <p>Higher Secondary Education</p>
+                    <p>CBSE</p>
+                </div>
+
+                <div class="education-item">
+                    <h3>Don Bosco School, Siliguri</h3>
+                    <p>2012 - 2022</p>
+                    <p>Primary and Secondary Education</p>
+                    <p>ICSE</p>
+                </div>
+            </section>
+            <hr>
+            <h1 id="skl">Skills</h1>
+            <h2>Programming Languages</h2>
+            <ul>
+                <li>Python (Native)</li>
+                <li>Java (Native)</li>
+                <li>HTML (Basic)</li>
+                <li>CSS (Basic)</li>
+                <li>C (Basic)</li>
+                <li>R (Basic)</li>
+            </ul>
+
+            <h2>Document Preparation</h2>
+            <ul>
+                <li>LaTeX</li>
+            </ul>
+            <hr>
+            <h1 id="exp">Experiences</h1>
             <div class="box">
                 <div class="vertical">
                     <img class="image-top" src="dv1.png" alt="">
@@ -221,7 +348,6 @@
             </div>
             </div>
         </section>
-
     </main>
     <footer>
         <div class="footer">
@@ -229,14 +355,17 @@
                 <h3>Anubrata's Portfolio</h3>
             </div>
             <div class="footer-second">
-<ul>
-    <li>Home</li>
-    <li>About</li>
-    <li>Contact</li>
-</ul>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#abt">About</a></li>
+                </ul>
             </div>
             <div class="footer-third">
-
+                <h4 id="con">Connect</h4>
+                <li><a href="mailto:anubrata.600das@gmail.com">E-mail</a></li>
+                <li><a
+                        href="https://www.linkedin.com/in/anubrata-das-98435731b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BAtoPI10XQAaIjEVz3yJKsw%3D%3D">LinkedIn</a>
+                </li>
             </div>
             <div class="footer-fourth"></div>
         </div>
